@@ -15,9 +15,52 @@ body {
   overflow-x: hidden;
 }
 
+header{
+  width: 100%;
+  height: 80px;
+  display: block;
+  background-color: #EEE;
+  box-shadow: 5px 5px 5px #807b7b;
+}
+
+.logo_contaniner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo{
+  display: inline-block;
+  margin-top: 10px;
+  height: 55px;
+}
+
+.band{
+  display: inline-block;
+  font-size: 30px;
+  font-weight: bold;
+  color: #5F5F5F;
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+
 .center {
   width: 80%;
   margin: 0px auto;
+}
+
+
+.container {
+  background: white;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.title_section {
+  text-align: left;
+  font-size: 25px;
+  font-weight: 200;
+  color: #5F5F5F;
 }
 
 #footer {
@@ -28,6 +71,10 @@ body {
   color: #444;
 }
 
+.clearfix {
+  clear: both;
+  float: none;
+}
 #footer p {
   margin: 0px;
   padding: 0px;
