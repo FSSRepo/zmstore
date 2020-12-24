@@ -1,0 +1,29 @@
+const container = document.getElementById("models");
+/*
+function makeRows(rows, cols) {
+  container.style.setProperty('--grid-rows', rows);
+  container.style.setProperty('--grid-cols', cols);
+  for (c = 0; c < (rows * cols); c++) {
+    let cell = document.createElement("div");
+    cell.innerText = (c + 1);
+    container.appendChild(cell).className = "grid_item";
+  };
+};*/
+
+function showRecent() {
+  var rows = Math.floor(recent.length / 2);
+  container.style.setProperty('--grid-rows', rows + 1);
+  container.style.setProperty('--grid-cols', 2);
+  for (c = 0; c < recent.length; c++) {
+    var model = recent[c];
+    let cell = document.createElement("div");
+    cell.innerHTML = `
+      <div class="model_item">
+        <img src="${model.image}.png" alt="${model.name}"/>
+        <p>${model.name}</p>
+      </div>
+    `;
+    container.appendChild(cell);
+  }
+}
+showRecent();

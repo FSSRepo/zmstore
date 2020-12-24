@@ -59,7 +59,7 @@ header{
 .title_section {
   text-align: left;
   font-size: 25px;
-  font-weight: 200;
+  font-weight: 500;
   color: #5F5F5F;
 }
 
@@ -75,7 +75,44 @@ header{
   clear: both;
   float: none;
 }
+#footer{
+  margin-top: 20px;
+}
+
 #footer p {
   margin: 0px;
   padding: 0px;
+}
+
+.models_container {
+  display: grid;
+  grid-gap: 4px;
+  grid-template-rows: repeat(var(--grid-rows), 240px);
+  grid-template-columns: repeat(var(--grid-cols), 50%);
+}
+
+.model_item {
+  height:240px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.model_item img {
+  width: 100%;
+  height: 50%;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 5px;
+}
+.model_info {
+  padding: 10px;
+}
+
+.model_info p {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  line-height: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
