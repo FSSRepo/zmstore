@@ -1,5 +1,24 @@
 const container = document.getElementById("models");
 
+function querySt(ji) {
+  hu = window.location.search.substring(1);
+  gy = hu.split("&");
+  for (i = 0; i < gy.length; i++) {
+    ft = gy[i].split("=");
+    if (ft[0] == ji) {
+      return ft[1];
+    }
+  }
+}
+
+if(querySt("show")) {
+  $("#normal-content").hide();
+  $("#privacy-content").show();
+} else {
+  $("#normal-content").show();
+  $("#privacy-content").hide();
+}
+
 function showRecent() {
   for (c = 0; c < recent.length; c++) {
     var model = recent[c];
@@ -14,6 +33,7 @@ function showRecent() {
     container.appendChild(cell);
   }
 }
+
 function showOthers() {
   var rows = Math.floor(recent.length / 2);
   container.style.setProperty('--grid-rows', rows + 1);
@@ -32,7 +52,9 @@ function showOthers() {
     container.appendChild(cell);
   }
 }
+
 showRecent();
+
 $('.sidebarbtn').click(function(){
   $('.sidebarbtn').toggleClass("click");
   $('.sidebar').toggleClass("show");
